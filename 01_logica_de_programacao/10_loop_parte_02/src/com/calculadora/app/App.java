@@ -32,8 +32,6 @@ public class App {
         scan.close();
     }
 
-    // ---------- Métodos auxiliares ----------
-
     private static void exibirMenu() {
         System.out.println("\n========= CALCULADORA =========");
         System.out.println("1 - Soma");
@@ -53,7 +51,7 @@ public class App {
                 return scan.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida. Digite um número inteiro!");
-                scan.nextLine(); // limpa o buffer
+                scan.nextLine(); 
             }
         }
     }
