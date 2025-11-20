@@ -11,17 +11,6 @@ public class Conta implements Iconta {
     public Conta() {
     }
 
-
-    public Conta(String cpf, String titular, double saldo, String agencia, String nConta) {
-        this.cpf = cpf;
-        this.titular = titular;
-        this.saldo = saldo;
-        this.agencia = agencia;
-        this.nConta = nConta;
-    }
-
-
-
     public String getCpf() {
         return this.cpf;
     }
@@ -80,10 +69,6 @@ public class Conta implements Iconta {
 
     @Override
     public double sacar(double valor) {
-        if (valor > this.saldo) {
-            System.out.println("Saldo insuficiente para saque.");
-            return this.saldo;
-        }
         this.saldo -= valor;
         return this.saldo;
     }

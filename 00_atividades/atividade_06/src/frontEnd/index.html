@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulário Avançado</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="dark">
+    <header>
+        <h1>Formulário <span class="highlight">Cadastro</span></h1>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+    </header>
+
+    <main>
+        <form id="form" novalidate>
+            <section class="step active" aria-label="Dados Pessoais">
+                <h2>Dados Pessoais</h2>
+
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" maxlength="14" required />
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" maxlength="15" required />
+
+                <div class="wizard-buttons">
+                    <button type="button" class="prev" style="display:none;">← Anterior</button>
+                    <button type="button" class="next">Próximo →</button>
+                    <button type="submit" style="display:none;">Enviar</button>
+                </div>
+            </section>
+
+            <!-- Parte 2 -->
+            <section class="step" aria-label="Informações Complementares">
+                <h2>Informações Complementares</h2>
+
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" name="altura" min="50" max="250" required />
+
+                <label for="escolaridade">Escolaridade:</label>
+                <select id="escolaridade" name="escolaridade" required>
+                    <option value="">Selecione</option>
+                    <option value="fundamental">Ensino Fundamental</option>
+                    <option value="medio">Ensino Médio</option>
+                    <option value="superior">Ensino Superior</option>
+                    <option value="posgraduacao">Pós-graduação</option>
+                </select>
+
+                <label for="profissao">Profissão:</label>
+                <input type="text" id="profissao" name="profissao" required />
+
+                <label for="salario">Salário (R$):</label>
+                <input type="number" id="salario" name="salario" min="0" step="0.01" required />
+
+                <div class="wizard-buttons">
+                    <button type="button" class="prev">← Anterior</button>
+                    <button type="button" class="next">Próximo →</button>
+                    <button type="submit" style="display:none;">Enviar</button>
+                </div>
+            </section>
+
+            <!-- Parte 3 -->
+            <section class="step" aria-label="Endereço">
+                <h2>Endereço</h2>
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" maxlength="9" required />
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" readonly required />
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" readonly required />
+
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" id="logradouro" name="logradouro" readonly required />
+
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required />
+
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" name="complemento" />
+
+                <div class="wizard-buttons">
+                    <button type="button" class="prev">← Anterior</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </section>
+        </form>
+    </main>
+
+    <div id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+    <div id="loading" aria-hidden="true" role="status">
+        <div class="spinner"></div>
+        <span>Enviando...</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
