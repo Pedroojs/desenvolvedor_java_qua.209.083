@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- css bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- meu css -->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+    <!-- favicon -->
+    <link href="img/java-white-50.png" rel="shortcut icon" type="image/png">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark sombra-navbar border-bottom mb-5" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/java-white-50.png" alt="Ícone" class="meu-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- fim do navbar -->
+
+    <!-- container -->
+    <main class="container">
+        <h1>Cadastro</h1>
+        <h3 class="mt-5">Dados do usuário</h3>
+        <hr>
+        <!-- formulário -->
+        <form class="mt-5">
+            <div class="row">
+                <!-- nome -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <label class="form-label">Nome:</label>
+                    <input class="form-control" type="text" placeholder="Primero nome"
+                        aria-label="default input example">
+                </div>
+                <!-- sobrenome -->
+                <div class="col-12 col-md-6 col-lg-8 mb-3">
+                    <label class="form-label">Sobrenome:</label>
+                    <input class="form-control" type="text" placeholder="Sobrenome completo"
+                        aria-label="default input example">
+                </div>
+                <!-- cpf -->
+                <div class="col-12 col-md-4 mb-3">
+                    <label class="form-label">CPF:</label>
+                    <input class="form-control" type="text" placeholder="000.000.000-00"
+                        aria-label="default input example">
+                </div>
+                <!-- data de nascimento -->
+                <div class="col-12 col-md-4 mb-3">
+                    <label class="form-label">Data de Nascimento:</label>
+                    <input class="form-control" type="date" aria-label="default input example">
+                </div>
+                <!-- gênero -->
+                <div class="col-12 col-md-4 mb-3">
+                    <label class="form-label">Gênero:</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Escolha uma opção...</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Feminino</option>
+                        <option value="3">Outro</option>
+                        <option value="4">Não desejo informar</option>
+                    </select>
+                </div>
+                <!-- e-mail -->
+                <div class="col-12 col-md-8 col-lg-9 mb-3">
+                    <label class="form-label">E-mail:</label>
+                    <input class="form-control" type="email" placeholder="usuario@servidor.com"
+                        aria-label="default input example">
+                </div>
+                <!-- telefone -->
+                <div class="col-12 col-md-4 col-lg-3 mb-3">
+                    <label class="form-label">Telefone:</label>
+                    <input class="form-control" type="tel" placeholder="(00) 90000-0000"
+                        aria-label="default input example">
+                </div>
+                <!-- nível de escolaridade -->
+                <div class="col-12 col-md-4 mb-3">
+                    <label class="form-label">Escolaridade:</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Escolha uma opção...</option>
+                        <option value="1">Ensino Fundamental</option>
+                        <option value="2">Ensino Médio</option>
+                        <option value="3">Ensino Superior</option>
+                        <option value="4">Pós-graduação</option>
+                        <option value="5">Mestrado</option>
+                        <option value="6">Doutorado</option>
+                    </select>
+                </div>
+                <!-- profissão -->
+                <div class="col-12 col-md-4 mb-3">
+                    <label class="form-label">Profissão:</label>
+                    <input class="form-control" type="text" placeholder="Cargo que ocupa"
+                        aria-label="default input example">
+                </div>
+                <!-- salário -->
+                <div class="col-12 col-md-4 mb-3">
+                    <label class="form-label">Salário:</label>
+                    <input class="form-control" type="number" placeholder="R$" aria-label="default input example"
+                        step="100">
+                </div>
+            </div>
+            <!-- fim da row -->
+
+            <h3 class="mt-5">Endereço</h3>
+            <hr>
+            <!-- row -->
+            <div class="row mt-5">
+                <!-- cep -->
+                <div class="col-12 col-md-4 col-lg-3 mb-3">
+                    <label class="form-label">CEP:</label>
+                    <input class="form-control" type="text" placeholder="00.000-00" aria-label="default input example">
+                </div>
+                <!-- uf -->
+                <div class="col-12 col-md-2 col-lg-1 mb-3">
+                    <label class="form-label">UF:</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </div>
+                <!-- cidade -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <label class="form-label">Cidade:</label>
+                    <input class="form-control" type="text" placeholder="Nome da cidade onde mora"
+                        aria-label="default input example">
+                </div>
+                <!-- bairro -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <label class="form-label">Bairro:</label>
+                    <input class="form-control" type="text" placeholder="Bairro onde mora"
+                        aria-label="default input example">
+                </div>
+                <!-- Logradouro -->
+                <div class="col-12 col-md-3 col-lg-2 mb-3">
+                    <label class="form-label">Logradouro:</label>
+                    <input class="form-control" type="text" placeholder="Tipo de logradouro"
+                        aria-label="default input example">
+                </div>
+                <!-- Número -->
+                <div class="col-12 col-md-3 col-lg-2 mb-3">
+                    <label class="form-label">Número:</label>
+                    <input class="form-control" type="text" placeholder="Número" aria-label="default input example">
+                </div>
+                <!-- Complemento -->
+                <div class="col-12 col-lg-8 mb-3">
+                    <label class="form-label">Complemento:</label>
+                    <input class="form-control" type="text" placeholder="Nome da rua, quadra, referênciam etc..."
+                        aria-label="default input example">
+                </div>
+                <!-- botão -->
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mt-5 mb-5">Cadastrar</button>
+                </div>
+            </div>
+            <!-- fim da row -->
+        </form>
+    </main>
+    <!-- fim do container -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center"> <a href="/"
+                    class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> <svg
+                        class="bi" width="30" height="24" aria-hidden="true">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg> </a> <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Company, Inc</span> </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Instagram"><svg class="bi"
+                            width="24" height="24" aria-hidden="true">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Facebook"><svg class="bi"
+                            width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- fim do footer -->
+
+    <!-- js bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
